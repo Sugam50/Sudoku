@@ -1,0 +1,141 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: url('https://i.pinimg.com/originals/fa/dc/b2/fadcb24075acb650de29f258af69d830.gif')
+}
+
+body,
+.App::before {
+  background: var(--bg) 0 / cover fixed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-image: var(--bg);
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: saturate(80%);
+}
+
+.App{
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  width: 585px;
+  height: 585px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.inputsselect{
+  display: flex;
+  width: 65px;
+  height: 65px;
+  border: 1px solid white ;
+  align-items: center;
+  justify-content:center; 
+  font-size: 2rem;
+}
+
+.App::before {
+  content: "";
+  margin: -35px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: -999; 
+}
+
+
+Input[type=number]::-webkit-inner-spin-button, 
+Input[type=number]::-webkit-outer-spin-button 
+{ 
+  -webkit-appearance: none; 
+  margin: 0; 
+  
+}
+Input[type=number]{
+  background: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.8rem;
+}
+.inputsselect1,.inputsselect2{
+  display: flex;
+  width: 65px;
+  height: 65px;
+  border: 1px solid white ;
+  align-items: center;
+  justify-content:center; 
+  font-size: 1.8rem;
+  z-index: 999;
+}
+
+.bc{
+  background-color: rgba(94, 185, 102, 0.9);
+}
+.cc{
+  background-color: rgba(192, 81, 81, 0.8);
+}
+
+h1{
+  color: white;
+  font-family: serif;
+  font-size: 55px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.btn{
+
+  margin-top: 10px;
+  display: flex;
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+  justify-content: center;
+}
+
+
+.sudoku{
+  display: grid;
+  grid-template-rows: 195px 195px 195px;
+  grid-template-columns: 195px 195px 195px;
+  position:absolute;
+  top: 0;
+  left:0;
+}
+
+.box{
+border: 3px solid rgb(255, 255, 255);
+}
